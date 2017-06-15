@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7cc227</color>
+    <color name="colorPrimaryDark">#6ba624</color>
+    <color name="colorAccent">#bac227</color>
+    <color name="spinnerItem">#000000</color>
+    <color name="editText">#000000</color>
+    <color name="buttonText">#000000</color>
+    <color name="headerText">#000000</color>
+</resources>

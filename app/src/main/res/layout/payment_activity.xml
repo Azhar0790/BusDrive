@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingEnd="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingStart="8dp">
+
+
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/new33"
+        android:hint="@string/cardNumber"
+        android:paddingLeft="10dp"
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/expMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/new33"
+        android:entries="@array/month_array"
+        android:nextFocusForward="@+id/save"
+        android:textColor="@color/buttonText" />
+    <Spinner
+        android:id="@+id/expYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/new33"
+        android:entries="@array/year_array"
+        android:nextFocusForward="@+id/save"
+        android:textColor="@color/buttonText" />
+    <Spinner
+        android:id="@+id/currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/new33"
+        android:entries="@array/currency_array"
+        android:nextFocusForward="@+id/save"
+        android:textColor="@color/buttonText" />
+
+    <EditText
+        android:id="@+id/cvc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/new33"
+        android:hint="@string/cvc"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:inputType="numberDecimal" />
+
+
+    <Button
+        android:id="@+id/save"
+        style="@style/Save"
+        android:text="@string/save"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:visibility="visible"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/saverx"
+        style="@style/Save"
+        android:text="@string/saverx"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/saveWithService"
+        style="@style/Save"
+        android:text="@string/saveService"
+        android:visibility="gone" />
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="busdriver.com.vidriver">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/blacklogo"
+        android:label="Vi Driver"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="busdriver.com.vidriver.LoginActivity"
+            android:screenOrientation="portrait"></activity>
+
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service
+            android:name="busdriver.com.vidriver.AllRequestSErvice"
+            android:label="RequestService" />
+
+        <activity
+            android:name="busdriver.com.vidriver.SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="busdriver.com.vidriver.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity android:name="busdriver.com.vidriver.ChangePasswordActivity" />
+        <activity
+            android:name="busdriver.com.vidriver.AdsActivity"
+            android:label="Advertisement">
+
+        </activity>
+        <activity
+            android:name="busdriver.com.vidriver.MessageActivity"
+            android:label="Driver's Message" />
+        <activity
+            android:name="busdriver.com.vidriver.CustomerActivity"
+            android:label="Driver's Feedback" />
+        <activity
+            android:name="busdriver.com.vidriver.AdminMessageActivity"
+            android:label="Admin's Message" />
+
+        <activity
+            android:name="busdriver.com.vidriver.RegisterActivity_"
+            android:label="Registration"></activity>
+        <activity
+            android:name="busdriver.com.vidriver.ResetPasswordActivity"
+            android:label="Reset Password"></activity>
+
+        <service
+            android:name="busdriver.com.vidriver.AlarmService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="busdriver.com.vidriver.AlarmReceiver"
+            android:process=":remote" />
+        <receiver
+            android:name="busdriver.com.vidriver.AlarmReceiver2"
+            android:process=":remote" />
+
+        <activity android:name="busdriver.com.vidriver.AlarmActivity"></activity>
+        <activity android:name="busdriver.com.vidriver.ScheduleActivity"></activity>
+
+
+        <!--       &lt;!&ndash; receivers for AlarmManager &ndash;&gt;
+               <receiver android:exported="true" android:label="Shift roster updating calendar."
+                   android:name="com.skooter.shiftroster.backend.service.UpdateCalendar" >
+               </receiver> <receiver android:exported="true" android:label="Shift roster checking alarm."
+               android:name="com.skooter.shiftroster.backend.service.SetWakeup" >
+           </receiver>
+               -->
+        <activity android:name="busdriver.com.vidriver.AlarmActivity2"></activity>
+        <activity
+            android:name="busdriver.com.vidriver.PaymentActivity"
+            android:label="Stripe Payment Gateway"></activity>
+        <activity
+            android:name="busdriver.com.vidriver.Package_activity"
+            android:label="Stripe Payment Gateway"></activity>
+        <activity
+            android:name="busdriver.com.vidriver.PaymentStripe"
+            android:label="Stripe Payment Gateway"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service android:name=".RingtonePlayingService"></service>
+        <service android:name=".GPSRingtonePlayingService"></service>
+        <receiver
+            android:name=".reciever.BootReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".AlarmStopDemoActivity"
+            android:label="Bus Driver Alarm"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="in.wptrafficanalyzer.servicealarmdemo.demoactivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AlarmStopDemoActivity2"
+            android:label="Bus Driver Alarm"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="in.wptrafficanalyzer.servicealarmdemo.demoactivity2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

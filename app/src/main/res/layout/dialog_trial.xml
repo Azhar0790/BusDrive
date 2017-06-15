@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:background="#fff">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cross"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/iv_cancel"
+        android:layout_alignParentRight="true"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Trial Period Remaining"
+    android:gravity="center"
+    android:textSize="18sp"
+    android:id="@+id/tv_trial_period"
+    android:layout_centerInParent="true"
+    android:layout_margin="20dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_trial_period">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:id="@+id/btn_cancel_sub"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Cancel Subscription"/>
+    </LinearLayout>
+
+</RelativeLayout>

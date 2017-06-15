@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Vi Driver</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="internet">No Internet Connection!!!</string>
+    <string name="ok">OK</string>
+    <string name="addPayment">Add Payment Method</string>
+    <string name="paymentMethods">Payment Methods</string>
+
+    <string name="endingIn">Card ending in </string>
+    <string name="progressMessage">Creating Token&#8230;</string>
+    <string name="validationErrors">Validation Errors</string>
+
+    <string name="cardNumber">Credit card Number</string>
+    <string name="save">Save</string>
+    <string name="saverx">Save Rx</string>
+    <string name="saveService">Save with Service</string>
+    <string name="cvc">CVC</string>
+<!--
+    <string name="google_maps_key">AIzaSyDUc-wPw8wwPazDVRBwv4UAxQlclax_bsA</string>-->
+
+<!--    ///busdriver@123-->
+    <string name="google_maps_key">AIzaSyDGtxG3Y0chpGyQsihqXjKPVxy2439ad4c</string>
+    <!--<string name="google_maps_key">AIzaSyAWFlsnt00X0wXxc13bjGu6xMNxuepHOUw</string>-->
+
+    <string-array name="currency_array">
+        <!--<item>Currency (optional)</item>-->
+        <!--<item>Unspecified</item>-->
+        <item>USD</item>
+    </string-array>
+</resources>
